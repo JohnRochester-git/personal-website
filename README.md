@@ -24,9 +24,3 @@ This website implements a **hybrid layout** designed to present professional cre
 > **Reflection on Pairing with Antigravity AI Agent:**
 > 
 > During the initial architectural design of the website, I noticed that the agent created a shared stylesheet (`styles.css`) and linked it inside the `<head>` of all three pages (`index.html`, `resume.html`, and `project.html`) rather than loading it once in the root page. I asked the agent why the CSS file had to be linked across every page individually if they were all hosted inside the same project repository. The agent explained that web browsers treat each HTML file as an independent document execution context; when navigating to a new URL, the browser constructs a fresh Document Object Model (DOM) from scratch and will only render styles referenced in that specific page's markup. This helped me understand how client-side web document lifecycles work and why centralizing design tokens in shared CSS custom properties allows multiple independent pages to maintain visual consistency without code duplication.
-
-
-3. **Access Your Live URL:**
-   - Within 1–2 minutes, refresh the Pages settings page to see your live URL:
-     `https://johnrochester-git.github.io/JohnRochester.github.io/`
-   - Test all navigation links on both desktop and mobile devices.
