@@ -7,33 +7,55 @@
 /* --- Custom Properties / Design Tokens --- */
 :root {
   /* Coffee & Beige Palette */
-  --bg-primary: #F9F6F0;          /* Warm cream / light linen background */
-  --bg-secondary: #F0EAE1;        /* Soft latte secondary background */
-  --bg-surface: #FFFFFF;          /* Pure white card surface */
-  --bg-surface-warm: #FAF4ED;     /* Warm card surface */
-  --bg-surface-tint: #F3EBE1;     /* Tinted container */
-  
-  --color-espresso: #2B1810;      /* Deep roasted espresso (primary text) */
-  --color-coffee-dark: #3E2723;   /* Rich coffee brown (headings, primary buttons) */
-  --color-coffee-medium: #5D4037; /* Medium roast (subheadings, secondary accents) */
-  --color-coffee-warm: #795548;   /* Warm mocha (interactive highlights) */
-  --color-latte: #A1887F;         /* Creamy latte (muted text, subtle details) */
-  
-  --color-beige-dark: #D7CCC8;    /* Deep beige border */
-  --color-beige-light: #EFEBE9;   /* Soft beige divider */
-  --color-cream: #FAF6F0;         /* Froth cream */
+  --bg-primary: #F9F6F0;
+  /* Warm cream / light linen background */
+  --bg-secondary: #F0EAE1;
+  /* Soft latte secondary background */
+  --bg-surface: #FFFFFF;
+  /* Pure white card surface */
+  --bg-surface-warm: #FAF4ED;
+  /* Warm card surface */
+  --bg-surface-tint: #F3EBE1;
+  /* Tinted container */
 
-  --color-accent-amber: #B87333;  /* Warm copper/amber accent */
-  --color-accent-gold: #C59B27;   /* Subtle LSU gold accent nod */
-  --color-accent-hover: #4E342E;  /* Dark roast hover */
-  
-  --text-primary: #261710;        /* Deep espresso for maximum readable contrast */
-  --text-secondary: #5C4A3E;      /* Muted coffee brown for body copy */
-  --text-muted: #846F60;          /* Subtle captions / timestamps */
-  --text-inverse: #FAF6F0;        /* Light cream text for dark buttons */
+  --color-espresso: #2B1810;
+  /* Deep roasted espresso (primary text) */
+  --color-coffee-dark: #3E2723;
+  /* Rich coffee brown (headings, primary buttons) */
+  --color-coffee-medium: #5D4037;
+  /* Medium roast (subheadings, secondary accents) */
+  --color-coffee-warm: #795548;
+  /* Warm mocha (interactive highlights) */
+  --color-latte: #A1887F;
+  /* Creamy latte (muted text, subtle details) */
 
-  --border-subtle: #E6DCD1;       /* Gentle organic border */
-  --border-focus: #795548;        /* Focus state border */
+  --color-beige-dark: #D7CCC8;
+  /* Deep beige border */
+  --color-beige-light: #EFEBE9;
+  /* Soft beige divider */
+  --color-cream: #FAF6F0;
+  /* Froth cream */
+
+  --color-accent-amber: #B87333;
+  /* Warm copper/amber accent */
+  --color-accent-gold: #C59B27;
+  /* Subtle LSU gold accent nod */
+  --color-accent-hover: #4E342E;
+  /* Dark roast hover */
+
+  --text-primary: #261710;
+  /* Deep espresso for maximum readable contrast */
+  --text-secondary: #5C4A3E;
+  /* Muted coffee brown for body copy */
+  --text-muted: #846F60;
+  /* Subtle captions / timestamps */
+  --text-inverse: #FAF6F0;
+  /* Light cream text for dark buttons */
+
+  --border-subtle: #E6DCD1;
+  /* Gentle organic border */
+  --border-focus: #795548;
+  /* Focus state border */
 
   /* Shadows */
   --shadow-sm: 0 2px 6px rgba(43, 24, 16, 0.05);
@@ -57,7 +79,9 @@
 }
 
 /* --- Base & Reset --- */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -401,9 +425,10 @@ img {
   align-items: center;
 }
 
+.avatar-image-wrapper,
 .avatar-icon-wrapper {
-  width: 110px;
-  height: 110px;
+  width: 124px;
+  height: 124px;
   border-radius: 50%;
   background: linear-gradient(135deg, var(--bg-surface-tint), var(--bg-secondary));
   border: 3px solid var(--border-subtle);
@@ -412,6 +437,24 @@ img {
   justify-content: center;
   margin-bottom: 1rem;
   color: var(--color-coffee-dark);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--transition-smooth), border-color var(--transition-smooth), box-shadow var(--transition-smooth);
+}
+
+.hero-avatar-card:hover .avatar-image-wrapper,
+.hero-avatar-card:hover .avatar-icon-wrapper {
+  border-color: var(--color-coffee-warm);
+  transform: scale(1.02);
+  box-shadow: var(--shadow-md);
+}
+
+.hero-avatar-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 20%;
+  display: block;
 }
 
 .avatar-stat-title {
