@@ -1,5 +1,11 @@
 # John Luke Rochester | Personal Portfolio Website
----------------------------------------------------
+
+- **Live Public Website:** [https://johnrochester-git.github.io/personal-website/](https://johnrochester-git.github.io/personal-website/)
+- **GitHub Repository:** [https://github.com/JohnRochester-git/personal-website](https://github.com/JohnRochester-git/personal-website)
+- **LinkedIn Profile:** [https://www.linkedin.com/in/luke-rochester-369280389/](https://www.linkedin.com/in/luke-rochester-369280389/)
+
+---
+
 ## Project Overview
 
 This website implements a **hybrid layout** designed to present professional credentials, competencies, and achievements to prospective recruiters, academic evaluators, and industry partners.
@@ -8,7 +14,9 @@ This website implements a **hybrid layout** designed to present professional cre
 - **`resume.html` (Comprehensive Curriculum Vitae):** A dedicated, printer-friendly CV page expanding on academic credentials at Louisiana State University (BS in IT, 2021–2026), St. Michael the Archangel High School (2017–2021), Microsoft Office Specialist: Excel Expert & Associate certifications (with verified Credly credentials), and detailed job achievements.
 - **`project.html` (Signature Case Study):** In-depth exploration of the *GoAuto Business Performance Analytics & Operations Reporting System*, detailing operational challenges in insurance claim tracking, Excel reporting model development, corporate letter system management, and business impact.
 - **`styles.css` (Design System):** A unified, accessible stylesheet adhering to a **Coffee & Beige** color palette (rich espresso typography, creamy beige surfaces, warm mocha accents) with responsive design for desktop, tablet, and mobile devices.
------------------------------------------------------
-> **Reflection on Pairing with Antigravity AI Agent:**
+
+---
+
+> **Reflection on Pairing with Antigravity AI Agent (CSC 4125 Rubric Requirement):**
 > 
 > During the initial architectural design of the website, I noticed that the agent created a shared stylesheet (`styles.css`) and linked it inside the `<head>` of all three pages (`index.html`, `resume.html`, and `project.html`) rather than loading it once in the root page. I asked the agent why the CSS file had to be linked across every page individually if they were all hosted inside the same project repository. The agent explained that web browsers treat each HTML file as an independent document execution context; when navigating to a new URL, the browser constructs a fresh Document Object Model (DOM) from scratch and will only render styles referenced in that specific page's markup. This helped me understand how client-side web document lifecycles work and why centralizing design tokens in shared CSS custom properties allows multiple independent pages to maintain visual consistency without code duplication.
